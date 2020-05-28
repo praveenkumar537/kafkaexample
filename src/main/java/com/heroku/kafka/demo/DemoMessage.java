@@ -17,7 +17,7 @@ public class DemoMessage {
                        @JsonProperty("partition") int partition,
                        @JsonProperty("offset") long offset) {
 
-        this.message = "PK "+message;
+        this.message = message;
         this.topic = topic;
         this.partition = partition;
         this.offset = offset;
@@ -25,7 +25,7 @@ public class DemoMessage {
 
     @JsonProperty("message")
     public String getMessage() {
-        return message;
+        return "PK "+message;
     }
 
     @JsonProperty("topic")
